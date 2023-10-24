@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+      .mainbtn {
+          background-color: rgba(0, 0, 0, 0);
+          border: none;
+          font-family: "Bagel Fat One", cursive;
+          font-size: 60px;
+          color:rgb(139, 208, 238);
+          -webkit-text-stroke: 3px rgb(0, 0, 0);
+          z-index: 1;
+      }
+      .mainbtn:hover {
+        color: rgb(109, 196, 234);
+    }
+      #header{
+        font-size: 40px;
+        margin-bottom: 30px;
+      }
+      h1, h3, h4{
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      body {
+        background-size: 1920px 1080px;
+        background-color: #afd485;
+        font-family:sans-serif;
+        text-align: center;
+        align-items: center;
+      }
+      h4{
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+      .container{
+        border: 3px solid black;
+        border-radius: 15px;
+        margin: 20px;
+        height: 970px;
+        min-width: 1000px;
+        background-color: white;
+        padding: 2%;
+      }
+      .main-container{
+        display: flex;
+        justify-content: center;
+      }
+      .userinfo-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        
+        align-items: center;
+      }
+      .capface-container{
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center; 
+        flex: 1;
+      }
+      #info_basic{
+          margin : 20px ;
+          display: block;
+          width: 80%;
+          height: 120px;
+          align-items: center; 
+
+          box-sizing: border-box;
+          background-color: rgba(0, 0, 0, 0);
+      }
+      #info_basic input {
+          display: block;
+          height: 50px;
+          width: 100%;
+
+          padding-left: 10px;
+          font-size: 25px;
+          font-weight: 500;
+          text-align:left;
+          color: rgb(120, 120, 120);
+          letter-spacing: 2px;
+          border-radius: 10px; 
+          border: 3px solid black;
+      }
+      .sex-container{
+        display: flex;
+      }
+      .sex-inne-container{
+        flex: 1;
+        font-size: 20px;
+        font-weight: 500;
+        align-items: center;
+        margin: 0px;
+      }
+      #video{
+        border: 3px solid black;
+        border-radius: 15px;
+        transform: scaleX(-1); /* X 축 방향으로 반전 */
+        width: 576px;
+        height: 432px;
+        margin-left: 30px;
+      }
+      .botton {
+          position:relative;
+          height: 60px;
+          width: 50%;
+          margin-top: 30px;
+          font-size: 30px;
+          font-weight: bold;
+          border: 3px solid black;
+          border-radius: 15px; 
+          background-color: rgb(255, 255, 255);
+      }
+      .botton:hover {
+            background-color: rgba(84, 106, 83, 0.554);
+      }
+      #countdown{
+          font-size: 30px;
+          font-weight: bold;
+          color: rgba(84, 106, 83, 0.554);
+      }

@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+.mainbtn {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-family: "Bagel Fat One", cursive;
+  font-size: 60px;
+  color:rgb(139, 208, 238);
+  -webkit-text-stroke: 3px rgb(0, 0, 0);
+  z-index: 1;
+}
+.mainbtn:hover {
+  color: rgb(109, 196, 234);
+}
+#header{
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+h1, h3{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body {
+  background-size: 1920px 1080px;
+  background-color: #afd485;
+  font-family:sans-serif;
+  text-align: center;
+  align-items: center;
+}
+.container{
+  border: 3px solid black;
+  border-radius: 15px;
+  margin: 20px;
+  max-height: 960px;
+  min-width: 800px;
+  background-color: white; 
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#video{
+  border: 3px solid black;
+  border-radius: 15px;
+  transform: scaleX(-1); /* X 축 방향으로 반전 */
+  width: 640px;
+  height: 480px;
+}
+.botton {
+    position:relative;
+    height: 70px;
+    width: 60%;
+
+    margin-top: 30px;
+    padding: 15px;
+
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+
+    border: 3px solid black;
+    border-radius: 20px; 
+    background-color: rgb(255, 255, 255);
+    max-width: 576px;
+}
+.botton:hover {
+      background-color: rgba(84, 106, 83, 0.554);
+}
+p{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: rgba(84, 106, 83, 0.554);
+    height: 50px;
+}

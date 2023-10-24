@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+body {
+    background-size: 1920px 1080px;
+    background-color: #afd485;
+    font-family: Arial, sans-serif;
+}
+.mainbtn {
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    top: 20px;
+    left: 60px;
+    font-family: "Bagel Fat One", cursive;
+    font-size: 60px;
+    color:rgb(139, 208, 238);
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    z-index: 1;
+}
+.mainbtn:hover {
+    color: rgb(109, 196, 234);
+}
+h1, h3, h4{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.container{
+    display: flex; /* 가로로 나란히 배치하기 위해 flex를 사용 */
+    border: 3px solid black;
+    border-radius: 15px;
+    margin: 20px;
+    height: 1040px;
+    width: 1860px;
+    background-color: white; /* 배경색 설정 (선택 사항) */
+}
+
+/**************************************************************************/
+/* 프로필 디자인 */
+/**************************************************************************/
+.profile-container{
+    position: relative;
+    display: flex; /* 가운데 정렬을 위해 flex 사용 */
+    flex-direction: column;
+    justify-content: center; 
+    flex: 2;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    letter-spacing: 4px;
+}
+#user-name{
+    text-align: center;
+    font-size: 70px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.basic_info{
+    display: flex; /* 가운데 정렬을 위해 flex 사용 */
+    justify-content: space-between;
+    justify-content: center; /* 가로 가운데 정렬 */
+    margin: 30px;
+}
+.other_info{
+    display: flex; /* 가운데 정렬을 위해 flex 사용 */
+    flex-direction: column;
+    justify-content: center; /* 가로 가운데 정렬 */
+    padding-left: 90px;
+}
+#user-gender, #user-age{
+    font-size: 50px;
+    flex-basis: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+.other_info div{
+    padding-top: 50px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/**************************************************************************/
+/* 달력 디자인 */
+/**************************************************************************/
+.calendar-container{
+    position: relative;
+    flex: 3;
+    padding: 30px; /* 여백 설정 (선택 사항) */
+    min-width: 45%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+.cal_top{
+    display: flex;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.cal{
+    text-align: center; 
+}
+#currentMonth{
+    flex: 1;
+    position: relative;
+    flex-basis: 30%;
+}
+.calendar-container button{
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 50px;
+    z-index: 2;
+}
+table.calendar{
+    /*border: 2px solid rgb(255, 0, 0);*/
+    display: inline-table;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* 테이블의 레이아웃을 고정합니다. */
+}
+table.calendar td{
+    text-align: left;
+    vertical-align: top;
+    border: 2px solid rgb(0, 0, 0);
+    width: 130px; /* 150 */
+    height: 97.5px; /* 100 */
+    font-size: 20px;
+}
+.cal-day{
+    position: relative;
+    z-index: 2;
+    margin: 3px;
+    padding: 5px;
+    display: inline;
+    font-size: 20px;
+    top: 10px;
+    font-weight: bold;
+
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+}
+.today {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.cal-schedule{
+    white-space: nowrap; /* 텍스트가 한 줄로 표시되도록 설정 */
+    overflow: hidden; /* 텍스트가 요소를 넘어갈 때 숨김 처리 */
+    text-overflow: ellipsis; /* 텍스트를 "..."으로 대체 */
+    /*width: 100px;
+    max-width: 80%;*/
+    padding-top: 20px;
+    padding-left: 7px;
+    display: none; /* 일정 컨테이너를 초기에 숨김으로 설정 */
+}
+.cal_picture{
+    position: relative;
+    z-index: 1;
+
+    /*width: 100%;*/
+    height: 100%;
+    /*height: 150px;*/
+    width: 100%;
+    /*("width", 640);
+    ("height", 480);*/
+
+    padding: 0px;
+    margin: 0px;
+
+    background-size: cover;
+
+    top: -22.5px;
+    display: inline-block;
+}
+.square{
+    border-left: 3px solid rgb(255, 255, 255);
+    border-right: 3px solid rgb(255, 255, 255);
+    z-index: 3;
+}
+
+
+/**************************************************************************/
+/* 일정 추가 디자인 */
+/**************************************************************************/
+.cal_bottom{
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.cal_btn{
+    flex: 1.5;
+    display: flex;
+    border-right: 3px solid black;
+    padding-top: 20px;
+}
+#pic-sch{
+    height: 140px;
+    margin: 10px;
+    margin-right: 20px;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 30px; 
+    border: 3px solid black;
+}
+#pic-sch:hover{
+    background-color: #91b06e8b;
+}
+
+#schedule{
+    font-weight: 600;
+    display: flex; 
+    flex: 6;
+    justify-content: flex-start;
+    font-size: 20px;
+    height: 20%;
+    margin: 20px;
+    margin-right: 0px;
+}
+.sch_input{
+    flex: 2.5;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.sch_btn{
+    flex: 1;
+    display: flex;
+    padding-top: 60px;
+}
+
+#schedule label{
+    font-size: 30px;
+}
+#schedule input{
+    height: 50px;
+    margin-top: 20px;
+    padding-left: 10px;
+    font-size: 30px;
+
+    text-align:left;
+    border-radius: 20px; 
+    background-color: rgba(255, 255, 255, 0.815);
+    border: 3px solid black;
+}
+.sch_btn button{
+    height: 70px;
+    margin: 10px;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 30px; 
+    border: 3px solid black;
+}
+.sch_btn button:hover{
+    background-color: #91b06e8b;
+}

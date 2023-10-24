@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>메인</title>
+<style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+    .mainbtn {
+        font-family: "Bagel Fat One", cursive;
+        font-size: 150px;
+        /*color:rgb(167, 233, 246);*/
+        color:rgb(139, 208, 238);
+
+        margin: 30px;
+        -webkit-text-stroke: 1px black;
+        text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
+    }
+    .mainbtn:hover {
+        color: rgb(109, 196, 234);
+    }
+    .signbtn{
+        font-family: "Bagel Fat One", cursive;
+        font-size: 90px;
+        color:rgb(198, 229, 243);
+        margin: 10px;
+        -webkit-text-stroke: 1px black;
+        text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
+    }
+    .signbtn:hover {
+        color:rgb(133, 201, 230);
+    }
+
+    body {
+        background-image: url("./img/main_background_ld_1920.png");
+        background-size: cover;
+        background-size: 1920px 1080px;
+        background-repeat: no-repeat;
+    }
+
+    .btn {
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    }
+
+    .imgsize{
+        height: 600px;
+        width: 600px;
+    }
+
+    /* 버튼 */
+    .botton {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+    }
+</style>
+</head>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const user_name = urlParams.get('user_name');
+</script>
+<body>
+
+    <header>
+        <!------------------------- 메인 홈  style="top: -20px; left: 20px;"------------------------->
+        <button type="botton" class="botton" style="top: -100px; left: 40px;" onClick="location.href='index.html?user_name=' + user_name">
+            <h1 class="mainbtn">청바지</h1>
+        </button>
+    
+        <!------------------------- 로그인   style="top: 100px; left: 140px;"------------------------->
+        <button type="botton" class="botton" style="top: -60px; left: 450px;" onClick="location.href='login.html?user_name=' + user_name">
+            <!--<img src="./img/cloud_login_icon.png" style="height: 350px; width: 350px;" alt="로그인" />-->
+            <h2 class="signbtn">로그인</h2>
+        </button>
+        
+        <!------------------------- 회원가입   style="top: 100px; left: 20px;"------------------------>
+        <button type="botton" class="botton" style="top: -60px; left: 800px;" onClick="location.href='sign_up.html?user_name=' + user_name">
+            <!--<img src="./img/cloud_signin_icon.png" style="height: 350px; width: 350px;" alt="회원가입" />-->
+            <h2 class="signbtn">회원가입</h2>
+        </button>
+    </header>
+        
+      <!------------------------- 우리집   style="top: 158px; left: 10px;" ------------------------->
+      <button type="botton" class="btn" style="top: 275px; left: 30px;" onClick="location.href='myhome.html?user_name=' + user_name">
+        <img src="./img/myhome_icon.png" class="imgsize" alt="우리집" />
+      </button>
+  
+      <!------------------------- 만남의 광장   style="top: 150px; left: 345px;" ------------------------->
+      <button type="botton" class="btn" style="top: 260px; left: 650px;" onClick="location.href='messenger.html?user_name=' + user_name">
+        <img src="./img/chat_icon.png" class="imgsize" alt="만남의 광장" />
+      </button>
+  
+      <!------------------------- 일자리 봉사   style="top: -8px; left: 644px;"------------------------->
+      <button type="botton" class="btn"  style="top: -20px; left: 1200px;" onClick="location.href='job_rec.html?user_name=' + user_name">
+        <img src="./img/work_icon.png" class="imgsize" alt="일자리 봉사" />
+      </button>
+  
+      <!------------------------- 취미 학교   style="top: 280px; left: 668px; ------------------------->
+      <button type="botton" class="btn" style="top: 500px; left: 1250px;" onClick="location.href='hobby_school.html?user_name=' + user_name">
+        <img src="./img/school_icon.png" class="imgsize" alt="취미 학교" />
+      </button>
+  
+</body>
+</html>

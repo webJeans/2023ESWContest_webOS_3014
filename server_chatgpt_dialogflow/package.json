@@ -1,0 +1,19 @@
+{
+  "name": "project-code",
+  "version": "1.0.0",
+  "description": "Hey everyone, if you are looking for a connection between OpenAI and Dialogflow CX, then read more. You will learn how to connect your existing Dialogflow CX agent to openAI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "openai": "^3.3.0"
+  }
+}

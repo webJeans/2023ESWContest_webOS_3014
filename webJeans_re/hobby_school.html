@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+  <link rel="stylesheet" href="./css/hobby_school.css">
+
+  <title>취미 학교</title>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <!------------------------------- 메인 홈 버튼 --------------------------->
+      <button type="button" class="mainbtn" onClick="location.href='index.html?user_name=' + user_name">
+        <h1>청바지</h1>
+      </button>
+
+      <div id="header">
+        <h2 style="font-size: 80px;">취미 학교</h2>
+      </div>
+    </header>
+
+    <div class="main-container">
+
+      <!----------------------------- 현장 강의 ----------------------------->
+        <div class="lec-container" style="border-right: 3px solid black;">
+            <h3>현장 강의</h3>
+            <div id="lecList"> </div>
+        </div>
+
+      <!----------------------------- 영상 강의 ----------------------------->
+        <div class="video-container">
+            <h3>영상 강의</h3>
+            <div id="videoList"> </div>
+        </div>
+
+    </div>
+  </div>
+</body>
+
+<script src="./src/hobby_school.js"></script>
+</html>

@@ -1,0 +1,20 @@
+{
+  "id": "com.tablet.bluejeans.app",
+  "version": "1.0.0",
+  "vendor": "My Company",
+  "type": "web",
+  "main": "mirrorCal.html",
+  "title": "newJeans",
+  "icon": "favicon.ico",
+  "allowAudioCapture": true,
+  "allowVideoCapture": true,
+  "requiredPermissions": [
+    "INTERNET",
+    "network.webview",
+    "time.query",
+    "activity.operation",
+    "CAMERA",
+    "all",
+    "notification.management"
+  ]
+}

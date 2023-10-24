@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Calendar</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <link rel="stylesheet" href="./css/myhome.css">
+</head>
+
+
+<body>
+
+    <div class="container">
+
+      <!-- 메인 홈 버튼 -->
+      <button class="mainbtn" onClick="location.href='index.html?user_name=' + user_name">
+        <h1>청바지</h1>
+      </button>
+      <!----------------------------- 프로필 ----------------------------->
+      <!----------------------------- 프로필 ----------------------------->
+      <div class="profile-container">
+        <h2 id="user-name"></h2>
+
+        <div class="basic_info">
+            <span id="user-age"></span>
+            <span id="user-gender"></span>
+        </div>
+
+        <div class="other_info">
+
+            <div class="telnum_container">
+                <span class="bdate">생일: </span>
+                <span id="user-bdate"></span>                
+            </div>
+
+            <div class="telnum_container">
+                <span>전화번호 : </span>
+                <span id="user-tel"></span>
+            </div>
+
+            <div class="address_container">
+                <span>주소 : 경기도 안산시</span>
+                <span class="address"></span>
+            </div>
+
+            <div class="hobby_container">
+                <span>취미 : 농구, 드라마 시청</span>
+                <span class="hobby"></span>
+            </div>
+
+        </div>
+
+        
+      </div>
+
+      
+      <!----------------------------- 달력 ----------------------------->
+      <!----------------------------- 달력 ----------------------------->
+      <div class="calendar-container">
+        <div class="cal_top">
+          <button id="movePrevMonth">⬅️</button>
+          <h1 id="currentMonth">월/년</h1>
+          <button id="moveNextMonth">➡️</button>
+        </div>
+
+        <div id="cal_tab" class="cal"> </div>
+
+        <div class="cal_bottom">
+            <div class="cal_btn">
+                <button id="pic-sch">일정 사진</button>               
+            </div>
+
+            <form id="schedule">
+                <div class="sch_input">
+                    <label for="sch_date"> 날짜</label>
+                    <input type="date" id="sch_date" required/>
+                </div>
+
+                <div class="sch_input">
+                    <label for="event">일정</label>
+                    <input type="text" id="event" required>
+                </div>
+
+                <div class="sch_btn">
+                    <button type="submit">추가</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="./src/myhome.js"></script>
+
+</body>
+</html>

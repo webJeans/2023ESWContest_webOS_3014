@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+.mainbtn {
+  position:absolute;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  top: 20px;
+  left: 60px;
+  font-family: "Bagel Fat One", cursive;
+  font-size: 60px;
+  color:rgb(139, 208, 238);
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  z-index: 1;
+}
+.mainbtn:hover {
+  color: rgb(124, 186, 213);
+}
+#header{
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+h1, h2, h3{
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+body {
+  background-size: 1920px 1080px;
+  background-color: #afd485;
+  font-family:sans-serif; 
+}
+h3{
+  font-size: 60px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid black;
+}
+
+.container{
+  border: 3px solid black;
+  border-radius: 15px;
+  margin: 20px;
+  min-width: 1000px;
+  height: 954px;
+  background-color: white;
+  padding: 40px;
+}
+.main-container{
+  display: flex;
+  margin-top: 50px;
+  max-height: 800px;
+}
+.lec-container, .video-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#lecList, #videoList{
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow-y: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#lecList div, #videoList div{
+  border-bottom: 2px solid gray;
+  padding: 20px;
+}
+h4 {
+  font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+p{
+  font-size: 30px;
+    margin: 0;
+}
