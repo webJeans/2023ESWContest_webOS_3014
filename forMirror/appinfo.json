@@ -1,10 +1,10 @@
 {
-  "id": "com.tablet.bluejeans.app",
+  "id": "com.calendar.bluejeans.app",
   "version": "1.0.0",
   "vendor": "My Company",
   "type": "web",
-  "main": "mirrorCal.html",
-  "title": "newJeans",
+  "main": "index.html",
+  "title": "calendar",
   "icon": "favicon.ico",
   "allowAudioCapture": true,
   "allowVideoCapture": true,
