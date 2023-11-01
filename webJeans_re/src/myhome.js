@@ -19,6 +19,20 @@ const firebaseConfig = {
     measurementId: "G-DXDNFGKM7T"
 };
 
+const edit_Button = document.getElementById("edit_button");
+const save_Button = document.getElementById("save_button");
+const addressDisplay = document.getElementById("address_display");
+const addressInput = document.getElementById("address_input");
+const hobbyDisplay = document.getElementById("hobby_display");
+const hobbyInput = document.getElementById("hobby_input");
+const doggieDisplay = document.getElementById("doggie_display");
+const doggieInput = document.getElementById("doggie_input");
+
+save_Button.style.display = "none";
+addressInput.style.display = "none";
+hobbyInput.style.display = "none";
+doggieInput.style.display = "none";
+
 // URL에서 쿼리 매개변수 읽어오기
 const urlParams = new URLSearchParams(window.location.search);
 const user_name = urlParams.get('user_name');
@@ -30,11 +44,9 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.database();
 const scheduleRef = db.ref('schedules/' + user_name); // 데이터베이스 경로
-var userRef = db.ref('users');
+const userRef = db.ref('users');
 
 const imagesByDate = {};
-
-
 
 var storage = firebase.storage();
 var storageRef = storage.ref();
@@ -57,26 +69,97 @@ function queryUserData(user) {
                     age--;
                 }
 
-                //et b_Month = 
-
-
-
                 document.getElementById('user-name').textContent = data.name;
-
                 document.getElementById('user-age').textContent = age +' 세';
-
                 document.getElementById('user-bdate').textContent = birthdate.getMonth()+1 +' 월  '+birthdate.getDate()+' 일';
-
                 document.getElementById('user-gender').textContent = data.gender;
-
                 document.getElementById('user-tel').textContent = data.tel;
+                addressDisplay.textContent = data.address;
+                hobbyDisplay.textContent = data.hobby;
+                doggieDisplay.textContent = data.doggie;
             });
         })
         .catch(function(error) {
             console.error("데이터 조회 오류:", error);
         });   
 }
+
 queryUserData(user_name);
+
+
+// 정보 수정 버튼
+edit_Button.addEventListener("click", function () {
+
+    console.log('정보 수정 버튼');
+    //editMode = True;
+    edit_Button.style.display = "none";
+    save_Button.style.display = "block";
+
+    addressDisplay.style.display = "none";
+    addressInput.style.display = "block";
+
+    hobbyDisplay.style.display = "none";
+    hobbyInput.style.display = "block";
+
+    doggieDisplay.style.display = "none";
+    doggieInput.style.display = "block";
+});
+
+// 저장 버튼
+save_Button.addEventListener("click", function () {
+
+    console.log('저장 버튼');
+    const updateAddress = addressInput.value;
+    const updateHobby = hobbyInput.value;
+    const updateDoggie = doggieInput.value;
+
+    const userQuery = userRef.orderByChild('name').equalTo(user_name);
+
+    userQuery.once('value', function(snapshot) {   
+
+        snapshot.forEach(function(childSnapshot) {
+            const userKey = childSnapshot.key; // 사용자의 고유 키를 가져옵니다.
+    
+            // 해당 사용자의 경로를 가져와서 정보를 불러옴
+            const specificUserRef = userRef.child(userKey);
+            specificUserRef.once('value', function(data) {
+                // 현재 저장된 데이터 가져오기
+                const userData = data.val();
+
+                // 변경된 값만 새로운 데이터에 업데이트
+                const updatedData = {
+                    address: updateAddress || userData.address,
+                    hobby: updateHobby || userData.hobby,
+                    doggie: updateDoggie || userData.doggie
+                };
+
+                // 데이터를 업데이트
+                specificUserRef.update(updatedData);
+            });
+        });
+
+        // 일정 시간 이후에 페이지 새로 고침
+        setTimeout(function() {
+            location.reload();
+        }, 300);
+    });
+
+    save_Button.style.display = "none";
+    edit_Button.style.display = "block";
+
+    addressInput.style.display = "none";
+    addressDisplay.style.display = "block";
+    
+    hobbyInput.style.display = "none";
+    hobbyDisplay.style.display = "block";
+
+    doggieInput.style.display = "none";
+    doggieDisplay.style.display = "block";
+
+});
+
+
+//--------------------------------- 달력 ---------------------------------
 
 // 스케줄 데이터 가져오기
 function setData() {
