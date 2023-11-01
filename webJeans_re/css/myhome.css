@@ -50,14 +50,15 @@ h1, h3, h4{
 #user-name{
     text-align: center;
     font-size: 70px;
-    margin-top: 40px;
+    margin-top: 100px;
     margin-bottom: 20px;
 }
 .basic_info{
     display: flex; /* 가운데 정렬을 위해 flex 사용 */
     justify-content: space-between;
     justify-content: center; /* 가로 가운데 정렬 */
-    margin: 30px;
+    margin: 20px;
+    margin-bottom: 0px;
 }
 .other_info{
     display: flex; /* 가운데 정렬을 위해 flex 사용 */
@@ -72,10 +73,42 @@ h1, h3, h4{
     font-weight: bold;
 }
 .other_info div{
-    padding-top: 50px;
+    padding-top: 40px;
     font-size: 40px;
     font-weight: bold;
 }
+.infoT{
+    padding-right: 10px;
+}
+
+.add_container{
+    display: flex;
+}
+
+.add_container input{
+    height: 50px;
+    font-size: 30px;
+    text-align:left;
+    border-radius: 20px; 
+    background-color: rgba(255, 255, 255, 0.815);
+    border: 3px solid black;
+}
+.edit_btn_container button{
+    height: 70px;
+    width: 200px;
+    margin-top: 30px;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 30px; 
+    border: 3px solid black;
+}
+.edit_btn_container button:hover{
+    background-color: #91b06e8b;
+}
+
 
 /**************************************************************************/
 /* 달력 디자인 */
@@ -180,7 +213,6 @@ table.calendar td{
     z-index: 3;
 }
 
-
 /**************************************************************************/
 /* 일정 추가 디자인 */
 /**************************************************************************/
@@ -232,6 +264,9 @@ table.calendar td{
     display: flex;
     padding-top: 60px;
 }
+#event, #sch_date{
+    width: 300px;
+}
 
 #schedule label{
     font-size: 30px;
@@ -249,6 +284,7 @@ table.calendar td{
 }
 .sch_btn button{
     height: 70px;
+    min-width: 66px;
     margin: 10px;
 
     font-size: 30px;
