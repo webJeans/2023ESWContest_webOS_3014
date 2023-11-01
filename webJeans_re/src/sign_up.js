@@ -1,57 +1,57 @@
 var bridge = new WebOSServiceBridge();  
-  function createToast(msg) {
-          var url = 'luna://com.webos.notification/createToast';
-          var params = JSON.stringify({
-              "message":msg
-          });
-          bridge.call(url,params);
-      }
+function createToast(msg) {
+  var url = 'luna://com.webos.notification/createToast';
+  var params = JSON.stringify({
+      "message":msg
+  });
+  bridge.call(url,params);
+}
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyD5OBSUvXY-Yd_eBUsBWnNG8hltOZFXazE",
-      authDomain: "webjeans-f0f95.firebaseapp.com",
-      databaseURL: "https://webjeans-f0f95-default-rtdb.firebaseio.com",
-      projectId: "webjeans-f0f95",
-      storageBucket: "webjeans-f0f95.appspot.com",
-      messagingSenderId: "334680708380",
-      appId: "1:334680708380:web:35d36575bf793088e396d9",
-      measurementId: "G-DXDNFGKM7T"
-    };
+const firebaseConfig = {
+  apiKey: "AIzaSyD5OBSUvXY-Yd_eBUsBWnNG8hltOZFXazE",
+  authDomain: "webjeans-f0f95.firebaseapp.com",
+  databaseURL: "https://webjeans-f0f95-default-rtdb.firebaseio.com",
+  projectId: "webjeans-f0f95",
+  storageBucket: "webjeans-f0f95.appspot.com",
+  messagingSenderId: "334680708380",
+  appId: "1:334680708380:web:35d36575bf793088e396d9",
+  measurementId: "G-DXDNFGKM7T"
+};
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const user_name = urlParams.get('user_name');
+const urlParams = new URLSearchParams(window.location.search);
+const user_name = urlParams.get('user_name');
 
-    // Firebase 초기화
-    firebase.initializeApp(firebaseConfig);
+// Firebase 초기화
+firebase.initializeApp(firebaseConfig);
 
-    // Firebase Authentication 및 Firestore 참조
-    //const auth = firebase.auth();
-    //const firestore = firebase.firestore();
-    const storage = firebase.storage();
-    const database = firebase.database();
+// Firebase Authentication 및 Firestore 참조
+//const auth = firebase.auth();
+//const firestore = firebase.firestore();
+const storage = firebase.storage();
+const database = firebase.database();
 
-    const video = document.getElementById('video');
-    const nameInput = document.getElementById('nameInput');
-    const telInput = document.getElementById('usertel');
-    const bdateInput = document.getElementById('userbdate');
+const video = document.getElementById('video');
+const nameInput = document.getElementById('nameInput');
+const telInput = document.getElementById('usertel');
+const bdateInput = document.getElementById('userbdate');
 
-    // 성별 정보 가져오기
-    const userGenderElements = document.querySelectorAll('input[name="usergender"]');
-    let userGender = null;
+// 성별 정보 가져오기
+const userGenderElements = document.querySelectorAll('input[name="usergender"]');
+let userGender = null;
 
-    const captureButton = document.getElementById('captureButton');
-    const info = document.getElementById('countdown');
-    let captureCount = 0;
-    var picNum = 5;  // 사진 촬영 횟수  *****************************************************************************
+const captureButton = document.getElementById('captureButton');
+const info = document.getElementById('countdown');
+let captureCount = 0;
+var picNum = 5;  // 사진 촬영 횟수  *****************************************************************************
 
-    // 웹캠을 위한 사용자 미디어 가져오기
-    navigator.mediaDevices.getUserMedia({ video: true })
-      .then((stream) => {
-        video.srcObject = stream;
-      })
-      .catch((error) => {
-        console.error('웹캠 접근 오류:', error);
-      });
+// 웹캠을 위한 사용자 미디어 가져오기
+navigator.mediaDevices.getUserMedia({ video: true })
+  .then((stream) => {
+    video.srcObject = stream;
+  })
+  .catch((error) => {
+    console.error('웹캠 접근 오류:', error);
+  });
 
 /*------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------*/
