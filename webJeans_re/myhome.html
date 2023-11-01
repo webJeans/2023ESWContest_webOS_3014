@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Calendar</title>
+    <title> 우리 집 </title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
@@ -31,24 +31,40 @@
 
         <div class="other_info">
 
-            <div class="telnum_container">
+            <div class="basic_container">
                 <span class="bdate">생일: </span>
-                <span id="user-bdate"></span>                
+                <span id="user-bdate"> </span>                
             </div>
 
-            <div class="telnum_container">
-                <span>전화번호 : </span>
+            <div class="basic_container">
+                <span >전화번호 : </span>
                 <span id="user-tel"></span>
             </div>
 
-            <div class="address_container">
-                <span>주소 : 경기도 안산시</span>
-                <span class="address"></span>
+            <!-- 수정 정보 -->
+            <div class="add_container">
+                <span class="infoT"> 주소 : </span> 
+                <span id="address_display"></span> 
+                <input type="text" id="address_input">
             </div>
 
-            <div class="hobby_container">
-                <span>취미 : 농구, 드라마 시청</span>
-                <span class="hobby"></span>
+            <div class="add_container">
+                <span class="infoT"> 취미 : </span> 
+                <span id="hobby_display"></span> 
+                <input type="text" id="hobby_input">
+            </div>
+
+            <div class="add_container">
+                <span class="infoT"> 강아지 : </span> 
+                <span id="doggie_display"></span> 
+                <input type="text" id="doggie_input">
+            </div>
+            
+
+            <!-- 수정 버튼 -->
+            <div class="edit_btn_container">
+                <button id="edit_button">정보 수정</button>
+                <button id="save_button"> 저장 </button>
             </div>
 
         </div>
