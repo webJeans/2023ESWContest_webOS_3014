@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 챗봇 </title>
+    <link rel="stylesheet" href="./css/chatbot.css">
+</head>
+<body>
+    <div class="main-container">
+        <div id="menu-container">
+            <!------------------------- 메인 홈 ------------------------->
+            <button type="botton" class="btn" style="top: 10px; left: 40px;" onClick="location.href='index.html?user_name=' + user_name">
+                <h1 class="mainbtn">청바지</h1>
+            </button>
+
+            <!------------------------- 우리집  ------------------------->
+            <button type="botton" class="btn" style="top: 270px; left: 50px;" onClick="location.href='myhome.html?user_name=' + user_name">
+                <img src="./img/myhome_icon.png" class="imgsize" alt="우리집" />
+            </button>
+        
+            <!------------------------- 만남의 광장 ------------------------->
+            <button type="botton" class="btn" style="top: 270px; left: 500px;" onClick="location.href='messenger.html?user_name=' + user_name">
+                <img src="./img/chat_icon.png" class="imgsize" alt="만남의 광장" />
+            </button>
+        
+            <!------------------------- 일자리 봉사 ------------------------->
+            <button type="botton" class="btn"  style="top: 650px; left: 50px;" onClick="location.href='job_rec.html?user_name=' + user_name">
+                <img src="./img/work_icon.png" class="imgsize" alt="일자리 봉사" />
+            </button>
+        
+            <!------------------------- 취미 학교 ------------------------->
+            <button type="botton" class="btn" style="top: 650px; left: 500px;" onClick="location.href='hobby_school.html?user_name=' + user_name">
+                <img src="./img/school_icon.png" class="imgsize" alt="취미 학교" />
+            </button>
+        </div>
+
+        <div id="chatting-container">
+            <h3 id="chat_title"> 안내 도우미 </h3>
+            <div id="chat-messages"></div>
+
+            <div id="user-input">
+                <input type="text" placeholder="메시지를 입력하세요…" />
+                <button>전송</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="./src/chatbot.js"></script>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const user_name = urlParams.get('user_name');
+</script>
+</html>
