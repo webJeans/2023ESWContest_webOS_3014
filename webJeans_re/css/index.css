@@ -1,49 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
-    .mainbtn {
-        font-family: "Bagel Fat One", cursive;
-        font-size: 150px;
-        /*color:rgb(167, 233, 246);*/
-        color:rgb(139, 208, 238);
+.mainbtn {
+    font-family: "Bagel Fat One", cursive;
+    font-size: 150px;
+    color:rgb(139, 208, 238);
+    margin: 30px;
+    -webkit-text-stroke: 1px black;
+    text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
+}
+.mainbtn:hover {
+    color: rgb(109, 196, 234);
+}
+.signbtn{
+    font-family: "Bagel Fat One", cursive;
+    font-size: 90px;
+    color:rgb(198, 229, 243);
+    margin: 10px;
+    -webkit-text-stroke: 1px black;
+    text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
+}
+.signbtn:hover {
+    color:rgb(133, 201, 230);
+}
 
-        margin: 30px;
-        -webkit-text-stroke: 4px black;
-        text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
-    }
-    .mainbtn:hover {
-        color: rgb(109, 196, 234);
-    }
-    .signbtn{
-        font-family: "Bagel Fat One", cursive;
-        font-size: 90px;
-        color:rgb(198, 229, 243);
-        margin: 10px;
-        -webkit-text-stroke: 1px black;
-        text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
-    }
-    .signbtn:hover {
-        color:rgb(133, 201, 230);
-    }
+body {
+    background-image: url("../img/main_background_ld_1920.png");
+    background-size: cover;
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+}
 
-    body {
-        background-image: url("../img/main_background_ld_1920.png");
-        background-size: cover;
-        background-size: 1920px 1080px;
-        background-repeat: no-repeat;
-    }
-
-    .btn {
+.btn {
     position:absolute;
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    }
+}
 
-    .imgsize{
-        height: 600px;
-        width: 600px;
-    }
+.imgsize{
+    height: 600px;
+    width: 600px;
+}
 
-    /* 버튼 */
-    .botton {
-        background-color: rgba(0, 0, 0, 0);
-        border: none;
-    }
+.botton {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+#doggieDisplay{
+    font-size: 90px;
+    font-family: "Bagel Fat One", cursive;
+    margin-top: 70px;
+    margin-left: -10px;
+    color: #ffdb8f;
+    -webkit-text-stroke: 6px black;
+}
