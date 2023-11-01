@@ -1,3 +1,11 @@
+var bridge = new WebOSServiceBridge();  
+function createToast(msg) {
+  var url = 'luna://com.webos.notification/createToast';
+  var params = JSON.stringify({
+      "message":msg
+  });
+  bridge.call(url,params);
+}
 
 const firebaseConfig = {
   apiKey: "AIzaSyD5OBSUvXY-Yd_eBUsBWnNG8hltOZFXazE",
@@ -9,6 +17,9 @@ const firebaseConfig = {
   appId: "1:334680708380:web:35d36575bf793088e396d9",
   measurementId: "G-DXDNFGKM7T"
 };
+
+const urlParams = new URLSearchParams(window.location.search);
+const user_name = urlParams.get('user_name');
 
 // Firebase 초기화
 firebase.initializeApp(firebaseConfig);
@@ -34,7 +45,7 @@ navigator.mediaDevices.getUserMedia({ video: true })
     video.srcObject = stream;
   })
   .catch((error) => {
-    console.error('웹캠 접근 오류:', error);
+    createToast('웹캠 접근 오류:');
   });
 
  /*-------------------------------------------------------------------------------------------------*/
